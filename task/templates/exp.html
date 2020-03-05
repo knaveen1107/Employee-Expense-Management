@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<head>
+
+    <head>
+<body>
+<table>
+    <h2> Expense </h2>
+    <div class="container" align="center">
+
+        <form method="POST" class="post-form" action="/exp/">
+            {% csrf_token %}
+            <div class="container">
+                <br>
+                <tr>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Reference:</label>
+                            <div class="col-sm-4">
+                                {{ form.reference }}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Date:</label>
+                            <div class="col-sm-4">
+                                {{ form.date }}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Description:</label>
+                            <div class="col-sm-4">
+                                {{ form.description }}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Stage:</label>
+                            <div class="col-sm-4">
+                                {{ form.stage }}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Employee:</label>
+                            <div class="col-sm-4">
+                                {{ form.employee }}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Total Amount:</label>
+                            <div class="col-sm-4">
+                                {{ form.total_amount }}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-1 col-form-label"></label>
+                            <div class="col-sm-4">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+            </div>
+
+            </td>
+            </tr>
+
+        </form>
+    </div>
+
+
+</table>
+</body>
+</html>

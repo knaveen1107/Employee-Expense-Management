@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<head>
+
+    <head>
+<body>
+<table>
+    <h2> Expense Lines </h2>
+    <div class="container" align="center">
+
+        <form method="POST" class="post-form" action="/expline/">
+            {% csrf_token %}
+            <div class="container">
+                <br>
+                <tr>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Expense:</label>
+                            <div class="col-sm-4">
+                                {{ form.expense }}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Quantity:</label>
+                            <div class="col-sm-4">
+                                {{ form.quantity }}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Item:</label>
+                            <div class="col-sm-4">
+                                {{ form.item }}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Unit Price:</label>
+                            <div class="col-sm-4">
+                                {{ form.price_unit }}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Description:</label>
+                            <div class="col-sm-4">
+                                {{ form.description }}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Total Price:</label>
+                            <div class="col-sm-4">
+                                {{ form.total }}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-1 col-form-label"></label>
+                            <div class="col-sm-4">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+            </div>
+
+            </td>
+            </tr>
+
+
+        </form>
+    </div>
+
+
+</table>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<head>
+
+    <head>
+<body>
+<table>
+    <h2> Employee </h2>
+    <div class="container" align="center">
+
+        <form method="POST" class="post-form" action="/emp/">
+            {% csrf_token %}
+            <div class="container">
+                <br>
+                <tr>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Name:</label>
+                            <div class="col-sm-4">
+                                {{ form.name }}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Gender:</label>
+                            <div class="col-sm-4">
+                                {{ form.gender }}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Department:</label>
+                            <div class="col-sm-4">
+                                {{ form.department }}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Marital Status:</label>
+                            <div class="col-sm-4">
+                                {{ form.marital_status }}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Job Title:</label>
+                            <div class="col-sm-4">
+                                {{ form.job_title }}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Email:</label>
+                            <div class="col-sm-4">
+                                {{ form.email }}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Employee Status:</label>
+                            <div class="col-sm-4">
+                                {{ form.employee_status }}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Phone:</label>
+                            <div class="col-sm-4">
+                                {{ form.phone }}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <div class="form-group row">
+                            <label class="col-sm-1 col-form-label"></label>
+                            <div class="col-sm-4">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+            </div>
+
+            </td>
+            </tr>
+
+
+        </form>
+    </div>
+
+
+</table>
+</body>
+</html>
